@@ -9,8 +9,8 @@ const Hero = ({
 			<Container>
 				<Row className="justify-content-center">
 					<Col md={10}>
-						<h1 className="display-4 fw-bold">{title}</h1>
-						<p className="lead mt-3">{subtitle}</p>
+						<h1 className="display-3 fw-bold">{title}</h1>
+						<p className="lead mt-3 fs-4">{subtitle}</p>
 					</Col>
 				</Row>
 			</Container>

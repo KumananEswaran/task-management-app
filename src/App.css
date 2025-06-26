@@ -19,29 +19,29 @@ body,
 }
 
 .custom-bg-gray {
-	background-color: #f3f4f6;
+	background-color: #f3f4f6 !important;
 }
 
 .custom-bg-indigo {
-	background-color: #e0e7ff;
+	background-color: #e0e7ff !important;
 }
 
 .custom-btn-dark {
-	background-color: #5c5f5e;
-	border: none;
+	background-color: #5c5f5e !important;
+	border: none !important;
 }
 
 .custom-btn-dark:hover {
-	background-color: #374151;
+	background-color: #374151 !important;
 }
 
 .custom-btn-indigo {
-	background-color: #6366f1;
-	border: none;
+	background-color: #6366f1 !important;
+	border: none !important;
 }
 
 .custom-btn-indigo:hover {
-	background-color: #4f46e5;
+	background-color: #4f46e5 !important;
 }
 
 .submit-btn-indigo {
