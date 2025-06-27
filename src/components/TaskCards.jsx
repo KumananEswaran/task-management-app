@@ -1,6 +1,5 @@
 import tasks from '../tasks.json';
 import { Card, Button, Col, Row, Container, Badge } from 'react-bootstrap';
-import { FiEdit2, FiTrash2 } from 'react-icons/fi';
 
 const TaskCards = () => {
 	return (
