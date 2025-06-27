@@ -19,36 +19,43 @@ body,
 }
 
 .custom-bg-gray {
-	background-color: #f3f4f6 !important;
+	background-color: #f3f4f6;
 }
 
 .custom-bg-indigo {
-	background-color: #e0e7ff !important;
+	background-color: #e0e7ff;
 }
 
 .custom-btn-dark {
-	background-color: #5c5f5e !important;
-	border: none !important;
+	background-color: #5c5f5e;
+	border: none;
 }
 
 .custom-btn-dark:hover {
-	background-color: #374151 !important;
+	background-color: #374151;
 }
 
 .custom-btn-indigo {
-	background-color: #6366f1 !important;
-	border: none !important;
+	background-color: #6366f1;
+	border: none;
 }
 
 .custom-btn-indigo:hover {
-	background-color: #4f46e5 !important;
+	background-color: #4f46e5;
 }
 
-.submit-btn-indigo {
+.badge-large {
+	font-size: 1rem;
+}
+
+.submit-btn-indigo,
+.edit-btn-indigo {
 	background-color: #4338ca;
 }
 
 .submit-btn-indigo:hover,
-.submit-btn-indigo:disabled {
+.submit-btn-indigo:disabled,
+.edit-btn-indigo:hover,
+.edit-btn-indigo:disabled {
 	background-color: #6366f1;
 }

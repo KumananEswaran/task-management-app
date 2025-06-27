@@ -1,0 +1,44 @@
+[
+	{
+		"id": "1",
+		"title": "Submit project report",
+		"status": "New",
+		"createdAt": "2025-06-25T10:00:00Z",
+		"description": "Compile and submit the final project report to the supervisor by the end of the week."
+	},
+	{
+		"id": "2",
+		"title": "Fix login bug",
+		"status": "In Progress",
+		"createdAt": "2025-06-24T14:30:00Z",
+		"description": "Resolve the issue preventing users from logging in with their credentials."
+	},
+	{
+		"id": "3",
+		"title": "Refactor dashboard layout",
+		"status": "Completed",
+		"createdAt": "2025-06-23T09:15:00Z",
+		"description": "Redesign the dashboard layout for better responsiveness and cleaner UI."
+	},
+	{
+		"id": "4",
+		"title": "Update README documentation",
+		"status": "New",
+		"createdAt": "2025-06-26T08:45:00Z",
+		"description": "Add usage examples and setup instructions to the README file."
+	},
+	{
+		"id": "5",
+		"title": "Optimize database queries",
+		"status": "In Progress",
+		"createdAt": "2025-06-24T16:20:00Z",
+		"description": "Improve the performance of the dashboard by optimizing slow SQL queries."
+	},
+	{
+		"id": "6",
+		"title": "Conduct user feedback survey",
+		"status": "Completed",
+		"createdAt": "2025-06-22T11:00:00Z",
+		"description": "Distribute and collect survey responses from beta testers to gather feedback on the new features."
+	}
+]
