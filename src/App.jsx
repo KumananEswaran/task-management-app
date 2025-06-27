@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Taskspage from './pages/Taskspage';
 import Addtasks from './pages/Addtasks';
+import Toast from './components/Toast';
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 					<Route path="/add-task" element={<Addtasks />} />
 				</Routes>
 			</BrowserRouter>
+			<Toast />
 		</>
 	);
 }

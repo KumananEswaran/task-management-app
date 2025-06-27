@@ -4,6 +4,7 @@ import { Container, Form, Button, Spinner } from 'react-bootstrap';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Addtasks = () => {
 	const [title, setTitle] = useState('');
@@ -34,10 +35,10 @@ const Addtasks = () => {
 					status: status.value,
 				}
 			);
-			// toast.success('Contact saved successfully!');
+			toast.success('Task added successfully!');
 		} catch (error) {
 			console.error('Error saving contact:', error);
-			// toast.error('Failed to save contact. Please try again.');
+			toast.error('Failed to add task. Please try again.');
 		}
 		setSubmitting(false);
 		return navigate('/tasks');
