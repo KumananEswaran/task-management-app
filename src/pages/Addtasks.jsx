@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 const Addtasks = () => {
 	const [title, setTitle] = useState('');
 	const [description, setDescription] = useState('');
-	const [status, setStatus] = useState({ value: 'new', label: 'New' });
+	const [status, setStatus] = useState({ value: 'New', label: 'New' });
 
 	const [validated, setValidated] = useState(false);
 

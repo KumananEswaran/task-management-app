@@ -1,7 +1,51 @@
-import tasks from '../tasks.json';
-import { Card, Button, Col, Row, Container, Badge } from 'react-bootstrap';
+import {
+	Card,
+	Button,
+	Col,
+	Row,
+	Container,
+	Badge,
+	Spinner,
+} from 'react-bootstrap';
+// import { useState } from 'react';
+import axios from 'axios';
+import useSWR from 'swr';
+
+const fetcher = (url) => axios.get(url).then((res) => res.data);
 
 const TaskCards = () => {
+	// const [tasks, setTasks] = useState([]);
+
+	// useEffect(() => {
+	// 	const fetchContacts = async () => {
+	// 		try {
+	// 			const res = await axios.get(
+	// 				'https://taskmanagement-backend-ten.vercel.app/tasks'
+	// 			);
+	// 			setTasks(res.data);
+	// 		} catch (error) {
+	// 			console.error('Error fetching, contacts:', error);
+	// 		}
+	// 	};
+	// 	fetchContacts();
+	// }, []);
+
+	const {
+		data: tasks,
+		error,
+		isLoading,
+		// mutate,
+	} = useSWR('https://taskmanagement-backend-ten.vercel.app/tasks', fetcher);
+
+	if (error) return <p className="mt-4 text-danger">Error loading contacts</p>;
+	if (isLoading)
+		return (
+			<div className="text-center mt-4">
+				<Spinner animation="border" role="status" />
+				<p>Loading</p>
+			</div>
+		);
+
 	return (
 		<Container>
 			<Row className="g-4">
@@ -12,7 +56,7 @@ const TaskCards = () => {
 								className={`position-absolute top-0 start-0 w-100 ${
 									task.status === 'Completed'
 										? 'bg-success'
-										: task.status === 'In Progress'
+										: task.status === 'In progress'
 										? 'bg-warning'
 										: 'bg-primary'
 								}`}
@@ -26,12 +70,12 @@ const TaskCards = () => {
 										bg={
 											task.status === 'Completed'
 												? 'success'
-												: task.status === 'In Progress'
+												: task.status === 'In progress'
 												? 'warning'
 												: 'primary'
 										}
 										className={
-											task.status === 'In Progress'
+											task.status === 'In progress'
 												? 'text-dark badge-large'
 												: 'badge-large'
 										}>
@@ -41,7 +85,7 @@ const TaskCards = () => {
 								<Card.Text>Description: {task.description}</Card.Text>
 								<Card.Text className="text-muted">
 									Created at:{' '}
-									{new Date(task.createdAt).toLocaleDateString('en-US', {
+									{new Date(task.created_at).toLocaleDateString('en-US', {
 										year: 'numeric',
 										month: 'short',
 										day: 'numeric',

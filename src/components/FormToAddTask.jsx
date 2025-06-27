@@ -10,9 +10,9 @@ const FormToAddTask = ({
 	setStatus,
 }) => {
 	const options = [
-		{ value: 'new', label: 'New' },
-		{ value: 'in-progress', label: 'In-progress' },
-		{ value: 'completed', label: 'Completed' },
+		{ value: 'New', label: 'New' },
+		{ value: 'In progress', label: 'In progress' },
+		{ value: 'Copleted', label: 'Completed' },
 	];
 
 	return (
