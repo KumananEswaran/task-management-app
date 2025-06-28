@@ -37,7 +37,7 @@ const Addtasks = () => {
 			);
 			toast.success('Task added successfully!');
 		} catch (error) {
-			console.error('Error saving contact:', error);
+			console.error('Error saving task:', error);
 			toast.error('Failed to add task. Please try again.');
 		}
 		setSubmitting(false);

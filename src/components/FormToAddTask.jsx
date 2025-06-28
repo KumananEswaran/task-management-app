@@ -8,11 +8,12 @@ const FormToAddTask = ({
 	setDescription,
 	status,
 	setStatus,
+	disableTextFields = false,
 }) => {
 	const options = [
 		{ value: 'New', label: 'New' },
 		{ value: 'In progress', label: 'In progress' },
-		{ value: 'Copleted', label: 'Completed' },
+		{ value: 'Completed', label: 'Completed' },
 	];
 
 	return (
@@ -25,6 +26,7 @@ const FormToAddTask = ({
 					value={title}
 					onChange={(e) => setTitle(e.target.value)}
 					required
+					disabled={disableTextFields}
 				/>
 				<Form.Control.Feedback type="invalid">
 					Task title is required.
@@ -39,6 +41,7 @@ const FormToAddTask = ({
 					value={description}
 					onChange={(e) => setDescription(e.target.value)}
 					required
+					disabled={disableTextFields}
 				/>
 				<Form.Control.Feedback type="invalid">
 					Task description is required.
@@ -50,7 +53,7 @@ const FormToAddTask = ({
 					options={options}
 					placeholder="Select a status"
 					value={status}
-					onChange={(selectedOption) => setStatus(selectedOption)}
+					onChange={setStatus}
 				/>
 			</Form.Group>
 		</>
